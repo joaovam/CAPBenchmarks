@@ -90,7 +90,7 @@ static float _find_pivot(struct matrix *m, int i0, int j0)
 		/* Reduct. */
 		#pragma omp critical
 		{
-			if (fabs(MATRIX(m, pipvt, pjpvt) > fabs(MATRIX(m, ipvt, jpvt))))
+			if (fabs(MATRIX(m, pipvt, pjpvt)) > fabs(MATRIX(m, ipvt, jpvt)))
 			{
 				ipvt = pipvt;
 				jpvt = pjpvt;
